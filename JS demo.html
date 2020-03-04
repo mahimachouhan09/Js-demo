@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js demo.js"></script>
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+<script type="text/javascript">	
+
+	// function add_row(tblperson){
+	// 	var table = document.getElementById(tblperson);
+
+	// 	var rowCount = table.rows.length;
+	// 	var row = table.insertRow(rowCount);
+
+	// 	var cell1 = row.insertCell(0);
+	// 	var element1 = document.createElement("input");
+	// 	element1.type = "text";
+	// 	element1.name="txtName";
+	// 	cell1.appendChild(element1);
+
+	// 	var cell2 = row.insertCell(1);
+	// 	cell2.innerHTML = rowCount + 1;
+
+	// 	var cell3 = row.insertCell(2);
+	// 	var element2 = document.createElement("input");
+	// 	element2.type = "text";
+	// 	element2.name = "txtAge";
+	// 	cell3.appendChild(element2);
+
+	// }
+
+	// $(document).ready(function () {
+ //    var srno = 0;
+
+ //    $("#addrow").on("click", function () {
+ //        var newRow = $("<tr>");      
+	// 	var name = $("#name").val();
+	// 	var age = $("#age").val();
+ //        var cols = "";
+ //        cols += '<td><input type="text" class="form-control" name="srno' + srno + '"/></td>';
+ //        cols += '<td><input type="text" class="form-control" name="name' + name + '"/></td>';
+ //        cols += '<td><input type="text" class="form-control" name="age' + age + '"/></td>';
+ //        newRow.append(cols);
+ //        $("tblperson").append(newRow);
+ //        counter++;
+ //    });
+
+
+// });
+
+</script>
+
+
+</head>
+<body>
+<div class="container">
+	<form action="">    
+   		<button type="button" class="btn btn-indigo btn-sm m-0"data-toggle="modal" data-target="#myModal">Add </button>
+
+
+	<div class="modal fade" id="myModal" role="dialog">
+   		<div class="modal-dialog">   
+     		<!-- Modal content-->
+     		<div class="modal-content">
+     
+<style>
+input[type=text]
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+</style>
+
+
+ <h2>Add Form</h2>
+ <form id="addForm">
+   <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+   </div>
+   <div class="form-group">
+     <label for="age">Age:</label>
+     <input type="text" class="form-control" id="age" placeholder="Enter age" name="age">
+   </div>
+   <input type="button" class="add" onclick="add_row();" value="Add Row">
+ </form>
+</div>
+     </div>
+     
+   </div>
+ </div>
+ 
+
+<table class="table table-striped table-responsive-md btn-table" id= "tblperson">
+
+<thead>
+ <tr>
+   <th>Sr No.</th>
+   <th>Name</th>
+   <th>Age</th>
+   <th>Actions</th>
+ </tr>
+</thead>
+
+<tbody>
+<tr>
+  <!-- <th scope="row">1</th>-->
+  	<td><input type="text" id="OISrNo" size="10%" value="1" disabled="disabled"/></td>
+	<td><input type="text" name ="txtName" id="name" class="form-control"/></td>
+    <td><input type="text" name ="txtAge" id="age" class="form-control"/></td>
+    <td>
+    <button id="update" class="btn btn-sm btn-teal btn-rounded addNewColumn">Update</button>
+    <button id="up" class="btn btn-sm btn-teal btn-rounded addNewColumn">Up</button>
+    <button id="down" class="btn btn-sm btn-teal btn-rounded addNewColumn">Down</button>
+    <button id="delete" class="btn btn-sm btn-teal btn-rounded addNewColumn">Delete</button>
+    <button id="view" class="btn btn-sm btn-teal btn-rounded addNewColumn">View</button>
+   
+   </td>
+</tr>
+ 
+</tbody>
+</table>
+</form>
+</div>
+</body>
+</html>
