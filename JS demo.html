@@ -36,34 +36,28 @@
 
 	// }
 
-	// $(document).ready(function () {
- //    var srno = 0;
+	$(document).ready(function () {
+    var srno = 0;
 
- //    $("#addrow").on("click", function () {
- //        var newRow = $("<tr>");      
-	// 	var name = $("#name").val();
-	// 	var age = $("#age").val();
- //        var cols = "";
- //        cols += '<td><input type="text" class="form-control" name="srno' + srno + '"/></td>';
- //        cols += '<td><input type="text" class="form-control" name="name' + name + '"/></td>';
- //        cols += '<td><input type="text" class="form-control" name="age' + age + '"/></td>';
- //        newRow.append(cols);
- //        $("tblperson").append(newRow);
- //        counter++;
- //    });
-
-
-// });
-
+    $("#addrow").on("click", function () {
+        var newRow = $("<tr>");      
+		var name = $("#name").val();
+		var age = $("#age").val();
+        var cols = "";
+        cols += '<td><input type="text" class="form-control" name="srno' + srno + '"/></td>';
+        cols += '<td><input type="text" class="form-control" name="name' + name + '"/></td>';
+        cols += '<td><input type="text" class="form-control" name="age' + age + '"/></td>';
+        newRow.append(cols);
+        $("tblperson").append(newRow);
+        srno++;
+    });
+});
 </script>
-
-
 </head>
 <body>
 <div class="container">
 	<form action="">    
    		<button type="button" class="btn btn-indigo btn-sm m-0"data-toggle="modal" data-target="#myModal">Add </button>
-
 
 	<div class="modal fade" id="myModal" role="dialog">
    		<div class="modal-dialog">   
@@ -81,42 +75,41 @@ input[type=text]
 </style>
 
 
- <h2>Add Form</h2>
- <form id="addForm">
-   <div class="form-group">
+<h2>Add Form</h2>
+<form id="addForm">
+    <div class="form-group">
     <label for="name">Name:</label>
     <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
-   </div>
-   <div class="form-group">
-     <label for="age">Age:</label>
-     <input type="text" class="form-control" id="age" placeholder="Enter age" name="age">
-   </div>
-   <input type="button" class="add" onclick="add_row();" value="Add Row">
- </form>
+    </div>
+    <div class="form-group">
+    <label for="age">Age:</label>
+    <input type="text" class="form-control" id="age" placeholder="Enter age" name="age">
+    </div>
+   <input type="button" class="add-row" id ="add-row" value="Add Row">
+</form>
 </div>
-     </div>
-     
+    </div>
+
    </div>
- </div>
- 
+</div>
 
 <table class="table table-striped table-responsive-md btn-table" id= "tblperson">
 
 <thead>
- <tr>
+<tr>
    <th>Sr No.</th>
    <th>Name</th>
    <th>Age</th>
    <th>Actions</th>
- </tr>
+</tr>
 </thead>
 
 <tbody>
 <tr>
   <!-- <th scope="row">1</th>-->
   	<td><input type="text" id="OISrNo" size="10%" value="1" disabled="disabled"/></td>
-	<td><input type="text" name ="txtName" id="name" class="form-control"/></td>
-    <td><input type="text" name ="txtAge" id="age" class="form-control"/></td>
+	<td><input type="text" name ="name" id="name" class="form-control"/></td>
+    <td><input type="text" name ="age" id="age" class="form-control"/></td>
     <td>
     <button id="update" class="btn btn-sm btn-teal btn-rounded addNewColumn">Update</button>
     <button id="up" class="btn btn-sm btn-teal btn-rounded addNewColumn">Up</button>
