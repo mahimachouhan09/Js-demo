@@ -49,7 +49,7 @@ $(document).ready(function(){
  		var num=$(this).parents('tr').attr("data-sno");
  		document.getElementById("a").innerHTML=name;
  		document.getElementById("b").innerHTML=age;
- 		// document.getElementById("view").innerHTML = "Name: " + x +"<br>"+ "Age: "+y;
+ 		//document.getElementById("view").innerHTML = "Name: " + x +"<br>"+ "Age: "+y;
 });
 
 });
